@@ -1,0 +1,20 @@
+server:
+  port: 8001
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://peer1:8761/eureka
+spring:
+  application:
+    name: micro-service-config
+  cloud:
+    config:
+      server:
+        default-application-name: fpfos-blog-config
+        git:
+          uri: https://gitee.com/fpfos/fpfos-blog-config
+          username: fpfos@hotmail.com
+          password:
+          search-paths: /**
+      label: master

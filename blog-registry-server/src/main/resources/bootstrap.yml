@@ -1,0 +1,7 @@
+
+#logging:
+#  path: logback.xml
+#    security:
+#      user:
+#        name: admin
+#        password: admin123
