@@ -5,11 +5,11 @@ spring:
       name: BLOG-EUREKA # eureka.instance.appname 默认取值
 eureka:
   instance:
-    hostname: BLOG-EUREKA-01 # 实例名
+    hostname: BLOG-EUREKA-02 # 实例名
   client:
     registry-fetch-interval-seconds: 60 # seconds
     serviceUrl:
-      defaultZone: http://peer2:8762/eureka,http://peer3:8763/eureka
+      defaultZone: http://BLOG-EUREKA-01:8761/eureka,http://BLOG-EUREKA-02:8761/eureka
   server:
     enable-self-preservation: false
 
