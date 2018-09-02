@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="logPath" value="/blog-config-log"/>
+    <property name="logPath" value="./blog-config-log"/>
     <property name="serverName" value="blog-config-${profiles.active}"/>
     <contextName>${logPath}</contextName>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">

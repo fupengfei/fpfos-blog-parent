@@ -1,4 +1,4 @@
-## 阿里云
+## 阿里云(139.196.81.16)
 ##### 工具：
 > nginx , docker , mysql , rabbitmq
 
@@ -8,13 +8,13 @@
 
 
 
-## 腾讯1
+## 腾讯1(118.25.8.74)
 ##### 服务：
 > eureka , config , zuul , article , search
 
 
 
-## 腾讯2(redis,elsearch)
+## 腾讯2(118.25.50.222)
 ##### 工具：
 > nginx, redis , elasticsearch
 
