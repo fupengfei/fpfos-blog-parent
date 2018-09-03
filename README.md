@@ -1,24 +1,19 @@
-## 阿里云(139.196.81.16)
-##### 工具：
-> nginx , docker , mysql , rabbitmq
+# 全局架构
+## 架构图
+![fpfos 简单架构图](https://github.com/fupengfei/fpfos-blog-parent/blob/master/fpfos.png)
 
-##### 服务：
+## 技术应用
+> Spring Boot + Spring Cloud + Spring Data
+
+## 环境部署（Docker容器）
+#### 阿里云A
 > eureka , config , zuul , article , search
 
-
-
-
-## 腾讯1(118.25.8.74)
-##### 服务：
+#### 腾讯A
 > eureka , config , zuul , article , search
 
-
-
-## 腾讯2(118.25.50.222)
-##### 工具：
-> nginx, redis , elasticsearch
-
-##### 服务：
+#### 腾讯B
 > zuul , search
+
 
   
