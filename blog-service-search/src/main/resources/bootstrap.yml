@@ -14,4 +14,3 @@ spring:
       discovery:
         enabled: true
         service-id: BLOG-CONFIG-SERVER
-

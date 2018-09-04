@@ -1,6 +1,9 @@
 package com.fpfos.blog.mqreceive.rabbitmq;
 
+import com.fpfos.blog.entity.ArticleSearch;
+import com.fpfos.blog.service.ArticleServer;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,17 +12,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class Receive {
 
+    @Autowired
+    private ArticleServer articleServer;
+
     @RabbitListener(queues = "test")
     public void testReceive(String test){
 
-        System.out.println(" rabbitmq test receive message : " + test);
+        System.out.println(" rabbitmq [queue:test] receive message : \n" + test);
     }
 
     @RabbitListener(queues = "article")
-    public void articleReceive(Object article){
+    public void articleReceive(ArticleSearch article){
 
-        // TODO: 18-9-2 save redis
+        System.out.println(" rabbitmq [queue:article] receive message : \n " + article.toString() );
 
-        // TODO: 18-9-2 save elsearch
+        articleServer.addArticle(article);
     }
 }

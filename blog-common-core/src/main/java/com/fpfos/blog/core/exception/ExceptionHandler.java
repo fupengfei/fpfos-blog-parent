@@ -24,7 +24,7 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(value = ApiException.class)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<AbstractOutputBean> handleApiException(HttpServletRequest req, ApiException apiex) {
+    public ResponseEntity<AbstractOutputBean> handleApiException(ApiException apiex) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 

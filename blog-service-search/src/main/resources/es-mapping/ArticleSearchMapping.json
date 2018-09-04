@@ -1,0 +1,58 @@
+{
+  "articles": {
+    "properties": {
+      "primary_code": {
+        "type": "text",
+        "index": false
+      },
+      "title": {
+        "type": "text",
+        "copy_to": "search_all",
+        "analyzer": "ik_smart",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "article_content": {
+        "type": "text",
+        "copy_to": "search_all",
+        "analyzer": "ik_smart",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "author": {
+        "type": "keyword",
+        "index": true
+      },
+      "label": {
+        "type": "keyword",
+        "copy_to": "search_all",
+        "index": true
+      },
+      "create_date": {
+        "type": "long",
+        "index": false
+      },
+      "search_all": {
+        "type": "text",
+        "analyzer": "ik_smart",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}

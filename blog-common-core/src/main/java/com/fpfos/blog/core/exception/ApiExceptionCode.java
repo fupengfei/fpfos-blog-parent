@@ -1,31 +1,27 @@
 package com.fpfos.blog.core.exception;
 
-import lombok.Getter;
-
 /**
  * Created by Fu Pengfei on 2018/8/30.
  */
 
-public enum  ApiExceptionCode {
+public interface ApiExceptionCode {
 
-    DATA_CORRUPT(1000, "数据错误"),
+    static ApiExceptionCode DATA_CORRUPT() {
+        return new ApiExceptionCode() {
 
-    ;
+            @Override
+            public Integer getErrCode() {
+                return 1000;
+            }
 
-    @Getter
-    private final Integer errCode;
-
-    @Getter
-    private String errMsg;
-
-    ApiExceptionCode(String errMsg) {
-        this.errCode = 9999;
-        this.errMsg = errMsg;
+            @Override
+            public String getErrMsg() {
+                return "数据错误";
+            }
+        };
     }
 
-    ApiExceptionCode(Integer errCode, String errMsg) {
-        this.errCode = errCode;
-        this.errMsg = errMsg;
-    }
+    Integer getErrCode();
 
+    String getErrMsg();
 }
