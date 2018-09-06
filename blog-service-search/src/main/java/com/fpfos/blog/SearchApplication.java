@@ -37,8 +37,8 @@ public class SearchApplication {
 
     @PostConstruct
     public void init() {
-        String queue = "test";
-        rabbitTemplate.convertAndSend(queue, FpfosUtils.UUID());
+        String queue = "init";
+        rabbitTemplate.convertAndSend(queue, " BLOG-SERVICE-SEARCH START ... ");
     }
 
 }

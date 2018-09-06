@@ -15,10 +15,10 @@ public class Receive {
     @Autowired
     private ArticleServer articleServer;
 
-    @RabbitListener(queues = "test")
-    public void testReceive(String test){
+    @RabbitListener(queues = "init")
+    public void initReceive(String test){
 
-        System.out.println(" rabbitmq [queue:test] receive message : \n" + test);
+        System.out.println(" rabbitmq [queue:init] receive message :  " + test);
     }
 
     @RabbitListener(queues = "article")

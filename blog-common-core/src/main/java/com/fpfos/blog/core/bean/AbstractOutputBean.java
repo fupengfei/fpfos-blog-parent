@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class AbstractOutputBean extends JsonBaseObject implements Serializable{
+public abstract class AbstractOutputBean extends JsonBaseObject implements Serializable{
 
     private Integer code;
 

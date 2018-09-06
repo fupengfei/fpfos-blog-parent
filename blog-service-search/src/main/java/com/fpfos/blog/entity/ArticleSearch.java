@@ -21,22 +21,17 @@ import java.util.Date;
 public class ArticleSearch extends JsonBaseObject implements Serializable {
 
     @Id
-    private String primary_code;
+    private String primaryCode;
 
-    //    @Field(type = FieldType.Text, searchAnalyzer = "ik_smart", analyzer = "ik_smart")
     private String title;
 
-    //    @Field(type = FieldType.Text, searchAnalyzer = "ik_smart", analyzer = "ik_smart")
-    private String article_content;
+    private String articleContent;
 
-    //    @Field(type = FieldType.Keyword)
     private String author;
 
-    //    @Field(type = FieldType.Keyword, searchAnalyzer = "ik_smart", analyzer = "ik_smart")
     private String[] label;
 
-    //    @Field(type = FieldType.Date,format = DateFormat.custom, pattern = "dd.MM.yyyy hh:mm")
-    private Date create_date;
+    private Date createDate;
 
     private String search_all;
 }

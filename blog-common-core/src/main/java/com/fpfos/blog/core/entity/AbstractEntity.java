@@ -28,8 +28,8 @@ public abstract class AbstractEntity extends JsonBaseObject implements Serializa
     private String primaryCode;
 
     @Setter
-    @Column(name = "create_date" , updatable = false , nullable = false)
-    private Long createDate;
+    @Column(name = "create_date" , updatable = false , nullable = false , columnDefinition = "BIGINT")
+    private Date createDate;
 
     @RedisMapping
     @Column(name = "last_modify_time")

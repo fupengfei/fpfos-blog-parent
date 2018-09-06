@@ -1,6 +1,7 @@
 package com.fpfos.blog.core.exception;
 
 import com.fpfos.blog.core.bean.AbstractOutputBean;
+import com.fpfos.blog.core.bean.SimpleOutputBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -24,11 +25,11 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(value = ApiException.class)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<AbstractOutputBean> handleApiException(ApiException apiex) {
+    public ResponseEntity<SimpleOutputBean> handleApiException(ApiException apiex) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        AbstractOutputBean output = new AbstractOutputBean();
+        SimpleOutputBean output = new SimpleOutputBean();
 
         output.setCode(apiex.getErrCode());
         output.setErrorMsg(apiex.getErrMsg());
@@ -36,6 +37,6 @@ public class ExceptionHandler {
 
         logger.info("Exception message:\n{}", output.toString());
 
-        return new ResponseEntity<AbstractOutputBean>(output, headers, HttpStatus.OK);
+        return new ResponseEntity<SimpleOutputBean>(output, headers, HttpStatus.OK);
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.data.repository.NoRepositoryBean;
  * Created by Fu Pengfei on 2018/8/2.
  */
 @NoRepositoryBean
-public interface AbstractJpaRepository<T extends AbstractEntity, ID> extends JpaRepository<T, ID> {
+public interface AbstractJpaRepository<T extends AbstractEntity> extends JpaRepository<T, Long> {
 
     T findByPrimaryCode(String primaryCode);
 }

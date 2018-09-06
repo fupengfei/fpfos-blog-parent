@@ -1,0 +1,16 @@
+server:
+  port: 9001
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://BLOG-EUREKA-01:8761/eureka,http://BLOG-EUREKA-02:8761/eureka
+spring:
+  application:
+    name: BLOG-SERVICE-ARTICLE
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: BLOG-CONFIG-SERVER
